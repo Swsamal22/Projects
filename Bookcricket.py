@@ -53,7 +53,6 @@ if __name__ == "__main__":
     main function where we would ask user for the inputs
     """
     overs=input("How many overs of play do you want?\n")
-    cricket = Cricket(overs,3)
     Yes = input("Do you want the play to be started? 1. Y for yes 2. N for No?\n")
     
     player_scorecard={}
@@ -66,6 +65,7 @@ if __name__ == "__main__":
         for i in range(Player):
             Player_name = input("Enter the name of the Player\n")
             print(f"It's turn for {Player_name}\n")
+            cricket = Cricket(overs,3)
             Team_Score=cricket.Game()
             print(f"{Player_name} has scored {Team_Score} runs\n")
             player_scorecard[Player_name] = Team_Score
