@@ -54,6 +54,7 @@ if __name__ == "__main__":
     """
     overs=input("How many overs of play do you want?\n")
     Yes = input("Do you want the play to be started? 1. Y for yes 2. N for No?\n")
+    Wicket = int(input("Enter the total Wicket each player would get\n"))
     
     player_scorecard={}
     #start of the play and one player sets the target for the other player
@@ -65,7 +66,7 @@ if __name__ == "__main__":
         for i in range(Player):
             Player_name = input("Enter the name of the Player\n")
             print(f"It's turn for {Player_name}\n")
-            cricket = Cricket(overs,3)
+            cricket = Cricket(overs,Wicket)
             Team_Score=cricket.Game()
             print(f"{Player_name} has scored {Team_Score} runs\n")
             player_scorecard[Player_name] = Team_Score
