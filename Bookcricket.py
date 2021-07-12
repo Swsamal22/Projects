@@ -16,8 +16,10 @@ class Cricket:
             print(f"Over number is: {i} ")
             Total_runs += self.Over()
             if self.Wicket==0:
-                print("ALL OUT!\n")
+                print("ALL OUT!")
                 break
+            print(f"Total runs is {Total_runs}, remaining wickets is {self.Wicket}")
+            print("\n")
         return Total_runs
        
     def Over(self):
@@ -36,10 +38,9 @@ class Cricket:
                 balls += 1
             elif x in ['Wide','No Ball']:
                 runs += 1
-                print(f"ball number {balls} run is {x}")
-                print("Extra!")
-            elif x == 'Wicket':
-                print('OUT\n')
+                print(f"ball number {balls} run is {x}, Extra!")
+            else:
+                print(f"ball number {balls},  {x}")
                 self.Wicket -= 1
                 balls += 1
                 if self.Wicket==0:
@@ -64,9 +65,9 @@ if __name__ == "__main__":
         #call the start function for the play to start for a player
         for i in range(Player):
             Player_name = input("Enter the name of the Player\n")
-            print(f"It's turn for {Player_name}")
+            print(f"It's turn for {Player_name}\n")
             Team_Score=cricket.Game()
-            print(f"Player number 1 has scored {Team_Score} runs\n")
+            print(f"{Player_name} has scored {Team_Score} runs\n")
             player_scorecard[Player_name] = Team_Score
         
         print(player_scorecard)
