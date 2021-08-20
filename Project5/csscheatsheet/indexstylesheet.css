@@ -1,0 +1,20 @@
+.container {
+    width: 60%;
+    margin: auto;
+    
+    border: 5px solid #000;
+}
+
+.form-group label{
+    display: block;
+    width: 100%;
+}
+
+.form-group input{
+    width : 100%;
+    padding: 10px;
+}
+
+input:focus {
+    background-color: lightskyblue;
+}
